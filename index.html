@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lokhandwala Foundation School | Premium ICSE Education in Mumbai</title>
+    <meta name="description" content="Lokhandwala Foundation School (LFS) equips generations of children with education of the highest principles. Discover our premium ICSE curriculum in Kandivali, Mumbai.">
+    
+    <!-- Open Graph SEO -->
+    <meta property="og:title" content="Lokhandwala Foundation School">
+    <meta property="og:description" content="Empowering students with premium ICSE education since 1992.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lokhandwalaschool.org">
+    <!-- Replace with official OG Image -->
+    <meta property="og:image" content="placeholder-og.jpg"> 
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- JSON-LD Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Lokhandwala Foundation School",
+      "url": "https://lokhandwalaschool.org",
+      "logo": "https://lokhandwalaschool.org/logo.png",
+      "foundingDate": "1992-06-22",
+      "founders": [
+        {
+          "@type": "Person",
+          "name": "Mrs. & Mr. Lokhandwala"
+        }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Whispering Palms Plaza, Lokhandwala Township, Akurli Road, Kandivali (East)",
+        "addressLocality": "Mumbai",
+        "addressRegion": "Maharashtra",
+        "postalCode": "400101",
+        "addressCountry": "IN"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-022-29663662",
+        "contactType": "Admissions"
+      }
+    }
+    </script>
+
+    <style>
+        /* ========================================================
+           CSS VARIABLES & GLOBAL SETTINGS
+        ======================================================== */
+        :root {
+            --navy-blue: #002244;
+            --royal-blue: #0a3d91;
+            --gold: #C5A059;
+            --gold-hover: #dfb667;
+            --soft-grey: #f4f6f8;
+            --white: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Poppins', sans-serif;
+            
+            --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 15px 35px rgba(0, 34, 68, 0.1);
+            --border-radius: 12px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: var(--font-body);
+            color: var(--text-main);
+            background-color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            margin-top: 0;
+            font-weight: 600;
+            color: var(--navy-blue);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* ========================================================
+           UTILITIES & LAYOUT
+        ======================================================== */
+        .container {
+            width: 90%;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .section-padding { padding: 6rem 0; }
+        .bg-light { background-color: var(--soft-grey); }
+        .bg-navy { background-color: var(--navy-blue); }
+        .text-white { color: var(--white) !important; }
+        .text-gold { color: var(--gold) !important; }
+        .center { text-align: center; }
+        .relative { position: relative; }
+        .z-10 { z-index: 10; }
+        .max-w-700 { max-width: 700px; margin-inline: auto; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+        .mt-2 { margin-top: 1.5rem; }
+        .mt-4 { margin-top: 3rem; }
+        .mb-2 { margin-bottom: 1.5rem; }
+        .mb-4 { margin-bottom: 3rem; }
+        .ml-2 { margin-left: 1rem; }
+
+        .grid {
+            display: grid;
+            gap: 2rem;
+        }
+        .grid-3 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+        .grid-4 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+
+        .rounded { border-radius: var(--border-radius); overflow: hidden; }
+        .shadow-lg { box-shadow: var(--shadow-lg); }
+
+        /* Section Headers */
+        .eyebrow {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--royal-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .title-divider {
+            width: 60px;
+            height: 3px;
+            background-color: var(--gold);
+            margin: 0 auto 1.5rem auto;
+        }
+        .title-divider.left { margin-left: 0; }
+
+        /* ========================================================
+           BUTTONS
+        ======================================================== */
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-family: var(--font-body);
+            font-weight: 500;
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary { background-color: var(--royal-blue); color: var(--white); }
+        .btn-primary:hover { background-color: var(--navy-blue); transform: translateY(-2px); }
+        
+        .btn-gold { background-color: var(--gold); color: var(--white); }
+        .btn-gold:hover { background-color: var(--gold-hover); transform: translateY(-2px); }
+        
+        .btn-outline { background-color: transparent; border-color: var(--royal-blue); color: var(--royal-blue); }
+        .btn-outline.text-white { border-color: var(--white); }
+        .btn-outline:hover { background-color: var(--royal-blue); color: var(--white); }
+        .btn-outline.text-white:hover { background-color: var(--white); color: var(--navy-blue) !important; }
+
+        /* ========================================================
+           HEADER & NAVIGATION
+        ======================================================== */
+        .glass-header {
+            position: fixed;
+            top: 0; left: 0; width: 100%;
+            z-index: 1000;
+            padding: 1.5rem 0;
+            transition: var(--transition);
+        }
+
+        .glass-header.scrolled {
+            padding: 0.8rem 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+
+        .logo { display: flex; align-items: center; gap: 10px; z-index: 1001; }
+        .logo-mark {
+            background: var(--gold);
+            color: var(--white);
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            width: 45px; height: 45px;
+            display: flex; align-items: center; justify-content: center;
+            border-radius: 8px;
+        }
+        .logo-text { display: flex; flex-direction: column; font-family: var(--font-heading); }
+        .logo-text span:first-child { font-size: 1.1rem; font-weight: 700; line-height: 1.2; color: var(--white); }
+        .glass-header.scrolled .logo-text span:first-child { color: var(--navy-blue); }
+        .logo-text span:last-child { font-size: 0.75rem; letter-spacing: 1px; color: rgba(255,255,255,0.8); }
+        .glass-header.scrolled .logo-text span:last-child { color: var(--text-light); }
+
+        .main-nav { display: flex; align-items: center; gap: 2rem; }
+        .nav-links { list-style: none; display: flex; gap: 2rem; margin: 0; padding: 0; }
+        .nav-links a { color: var(--white); font-weight: 500; font-size: 0.95rem; position: relative; }
+        .glass-header.scrolled .nav-links a { color: var(--navy-blue); }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute; bottom: -4px; left: 0;
+            width: 0; height: 2px;
+            background: var(--gold);
+            transition: var(--transition);
+        }
+        .nav-links a:hover::after { width: 100%; }
+
+        .mobile-toggle { display: none; background: none; border: none; cursor: pointer; z-index: 1001; }
+        .mobile-toggle .bar {
+            display: block; width: 25px; height: 3px; margin: 5px auto;
+            background-color: var(--white); transition: var(--transition);
+        }
+        .glass-header.scrolled .mobile-toggle .bar { background-color: var(--navy-blue); }
+
+        /* ========================================================
+           HERO SECTION
+        ======================================================== */
+        .hero-section {
+            height: 100vh; min-height: 600px;
+            position: relative;
+            display: flex; align-items: center;
+            color: var(--white);
+        }
+        .hero-bg {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background-size: cover; background-position: center; z-index: 1;
+        }
+        .hero-overlay {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(90deg, rgba(0,34,68,0.9) 0%, rgba(0,34,68,0.4) 100%); z-index: 2;
+        }
+        .hero-content { position: relative; z-index: 3; max-width: 800px; padding-top: 5rem; }
+        .hero-subtitle {
+            display: inline-block; padding: 0.4rem 1rem;
+            background: rgba(255,255,255,0.1); backdrop-filter: blur(5px);
+            border-radius: 50px; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase;
+            margin-bottom: 1.5rem; border: 1px solid rgba(255,255,255,0.2);
+        }
+        .hero-title { font-size: 4.5rem; line-height: 1.1; margin-bottom: 1.5rem; color: var(--white); }
+        .hero-text { font-size: 1.2rem; opacity: 0.9; margin-bottom: 2.5rem; max-width: 600px; }
+        .hero-actions { display: flex; gap: 1rem; }
+
+        /* Mouse Scroll Indicator */
+        .scroll-indicator { position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); z-index: 3; }
+        .mouse { width: 30px; height: 50px; border: 2px solid var(--white); border-radius: 20px; position: relative; }
+        .wheel {
+            width: 4px; height: 8px; background: var(--white); border-radius: 2px;
+            position: absolute; top: 10px; left: 50%; transform: translateX(-50%);
+            animation: scroll 2s infinite;
+        }
+        @keyframes scroll { 0% { top: 10px; opacity: 1; } 100% { top: 30px; opacity: 0; } }
+
+        /* ========================================================
+           CARDS & SECTIONS
+        ======================================================== */
+        .glass-card {
+            background: var(--white); padding: 2.5rem; border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm); transition: var(--transition); border: 1px solid rgba(0,0,0,0.05);
+        }
+        .glass-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-lg); border-color: var(--gold); }
+        .card-icon { font-size: 2.5rem; margin-bottom: 1.5rem; }
+
+        .split-layout { display: flex; align-items: center; gap: 4rem; }
+        .split-content, .split-image { flex: 1; }
+        .vision-quote {
+            font-family: var(--font-heading); font-size: 1.25rem; font-style: italic;
+            color: var(--royal-blue); border-left: 4px solid var(--gold);
+            padding-left: 1.5rem; margin: 2rem 0;
+        }
+        .principal-msg { display: flex; align-items: center; gap: 1.5rem; margin-top: 2rem; }
+        .avatar { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid var(--gold); }
+
+        /* Academics */
+        .edu-card {
+            background: rgba(255,255,255,0.05); padding: 2rem; border-radius: var(--border-radius);
+            border: 1px solid rgba(255,255,255,0.1); transition: var(--transition);
+        }
+        .edu-card:hover { background: rgba(255,255,255,0.1); transform: translateY(-5px); }
+        .edu-card h4 { color: var(--gold); font-size: 1.25rem; margin-bottom: 1rem; }
+
+        /* Counters */
+        .counters-section { background: var(--white); border-top: 1px solid var(--soft-grey); }
+        .counter-box { text-align: center; }
+        .counter-number { font-size: 3.5rem; font-family: var(--font-heading); font-weight: 700; display: inline-block; }
+        .counter-suffix { font-size: 2.5rem; color: var(--gold); font-family: var(--font-heading); font-weight: 700; }
+        .counter-label { font-size: 1rem; color: var(--text-light); margin-top: 0.5rem; }
+
+        /* Gallery Grid */
+        .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 250px; gap: 1rem; }
+        .gallery-item { position: relative; border-radius: var(--border-radius); overflow: hidden; cursor: pointer; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+        .gallery-item:hover img { transform: scale(1.05); }
+        .gallery-item.wide { grid-column: span 2; }
+        .gallery-item.tall { grid-row: span 2; }
+        
+        .gallery-overlay {
+            position: absolute; bottom: 0; left: 0; width: 100%; padding: 2rem 1.5rem 1.5rem;
+            background: linear-gradient(to top, rgba(0,34,68,0.9), transparent); color: var(--white);
+            transform: translateY(20px); opacity: 0; transition: var(--transition);
+        }
+        .gallery-overlay h4 { color: var(--white); margin: 0; }
+        .gallery-item:hover .gallery-overlay { transform: translateY(0); opacity: 1; }
+
+        /* Admissions CTA */
+        .admissions-cta {
+            background-image: url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover; background-position: center; background-attachment: fixed;
+            position: relative; text-align: center;
+        }
+        .cta-overlay {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(10, 61, 145, 0.85);
+        }
+
+        /* ========================================================
+           FOOTER
+        ======================================================== */
+        .site-footer { background-color: var(--navy-blue); color: rgba(255,255,255,0.7); padding: 5rem 0 2rem; }
+        .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1.5fr 1.5fr; gap: 3rem; margin-bottom: 3rem; }
+        .footer-brand p { font-size: 0.9rem; }
+        .social-links a {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 36px; height: 36px; background: rgba(255,255,255,0.1); border-radius: 50%;
+            color: var(--white); margin-right: 0.5rem;
+        }
+        .social-links a:hover { background: var(--gold); }
+        .social-links svg { width: 20px; height: 20px; }
+        
+        .footer-links ul { list-style: none; padding: 0; margin: 0; }
+        .footer-links li { margin-bottom: 0.8rem; }
+        .footer-links a:hover { color: var(--gold); padding-left: 5px; }
+        
+        .footer-contact h4, .footer-links h4 { margin-bottom: 1.5rem; font-size: 1.2rem; }
+        .footer-contact p { margin-bottom: 1rem; font-size: 0.9rem; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; text-align: center; font-size: 0.85rem; }
+
+        /* Back to Top */
+        #back-to-top {
+            position: fixed; bottom: 30px; right: 30px; width: 45px; height: 45px;
+            background: var(--gold); color: var(--white); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; font-size: 1.2rem;
+            opacity: 0; visibility: hidden; transition: var(--transition); z-index: 999;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        #back-to-top.visible { opacity: 1; visibility: visible; }
+        #back-to-top:hover { transform: translateY(-5px); background: var(--royal-blue); }
+
+        /* ========================================================
+           ANIMATIONS & EFFECTS
+        ======================================================== */
+        .reveal { opacity: 0; transition: all 1s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0) translateX(0); }
+        .fade-up { transform: translateY(50px); }
+        .fade-right { transform: translateX(-50px); }
+        .fade-left { transform: translateX(50px); }
+        
+        .delay-1 { transition-delay: 0.1s; }
+        .delay-2 { transition-delay: 0.2s; }
+        .delay-3 { transition-delay: 0.3s; }
+        .delay-4 { transition-delay: 0.4s; }
+
+        /* Preloader */
+        #preloader {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: var(--navy-blue); z-index: 9999; display: flex; align-items: center; justify-content: center;
+            transition: opacity 0.5s ease;
+        }
+        .loader-spinner {
+            width: 50px; height: 50px; border: 3px solid rgba(255,255,255,0.3); border-radius: 50%;
+            border-top-color: var(--gold); animation: spin 1s ease-in-out infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        /* Ripple Effect */
+        .ripple {
+            position: absolute; border-radius: 50%; transform: scale(0);
+            animation: ripple-anim 0.6s linear; background-color: rgba(255, 255, 255, 0.4);
+        }
+        @keyframes ripple-anim { to { transform: scale(4); opacity: 0; } }
+
+        /* ========================================================
+           RESPONSIVE DESIGN (Media Queries)
+        ======================================================== */
+        @media (max-width: 1024px) {
+            .hero-title { font-size: 3.5rem; }
+            .split-layout { flex-direction: column; gap: 2rem; }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .gallery-item.wide { grid-column: span 1; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .main-nav {
+                position: fixed; top: 0; right: -100%; width: 80%; height: 100vh;
+                background: var(--navy-blue); flex-direction: column; justify-content: center;
+                transition: right 0.4s ease; padding: 2rem;
+            }
+            .main-nav.nav-active { right: 0; }
+            .nav-links { flex-direction: column; text-align: center; font-size: 1.2rem; gap: 1.5rem; }
+            .nav-links a { color: var(--white) !important; }
+            
+            .mobile-toggle { display: block; }
+            .mobile-toggle.toggle-active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); background-color: var(--white); }
+            .mobile-toggle.toggle-active .bar:nth-child(2) { opacity: 0; }
+            .mobile-toggle.toggle-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); background-color: var(--white); }
+            
+            .hero-title { font-size: 2.5rem; }
+            .section-padding { padding: 4rem 0; }
+            .gallery-grid { grid-template-columns: 1fr; }
+            .gallery-item.tall { grid-row: span 1; }
+            .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+        }
+    </style>
+</head>
+<body id="top">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header id="header" class="glass-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo" aria-label="LFS Homepage">
+                <div class="logo-mark">LFS</div>
+                <div class="logo-text">
+                    <span>Lokhandwala</span>
+                    <span>Foundation School</span>
+                </div>
+            </a>
+
+            <button class="mobile-toggle" aria-label="Toggle Menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#academics">Academics</a></li>
+                    <li><a href="#facilities">Facilities</a></li>
+                    <li><a href="#life">Life at School</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="nav-cta">
+                    <a href="#admissions" class="btn btn-primary btn-ripple">Admissions 2026-27</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');" aria-hidden="true"></div>
+            <div class="hero-overlay"></div>
+            
+            <div class="container hero-content reveal fade-up">
+                <span class="hero-subtitle">Established 1992 • Mumbai, India</span>
+                <h1 class="hero-title">Empowering Minds,<br>Elevating Spirits.</h1>
+                <p class="hero-text">Providing education of the highest principles and standards, nurturing leaders who empathize, sacrifice, and serve.</p>
+                <div class="hero-actions">
+                    <a href="#about" class="btn btn-primary btn-ripple">Discover LFS</a>
+                    <a href="#admissions" class="btn btn-outline btn-ripple">Apply Now</a>
+                </div>
+            </div>
+            
+            <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+            </a>
+        </section>
+
+        <!-- 2. Why Choose Us -->
+        <section id="why-us" class="section-padding">
+            <div class="container">
+                <div class="section-header center reveal fade-up">
+                    <h2 class="section-title">The Lokhandwala Difference</h2>
+                    <div class="title-divider"></div>
+                </div>
+                
+                <div class="grid grid-3">
+                    <div class="card glass-card reveal fade-up delay-1">
+                        <div class="card-icon">🌍</div>
+                        <h3>International Standards</h3>
+                        <p>A globally benchmarked ICSE curriculum that fosters critical thinking and intellectual growth.</p>
+                    </div>
+                    <div class="card glass-card reveal fade-up delay-2">
+                        <div class="card-icon">🏛️</div>
+                        <h3>Premium Infrastructure</h3>
+                        <p>State-of-the-art laboratories, expansive sports grounds, and modern technology-integrated classrooms.</p>
+                    </div>
+                    <div class="card glass-card reveal fade-up delay-3">
+                        <div class="card-icon">🤝</div>
+                        <h3>Holistic Development</h3>
+                        <p>A balanced focus on performing arts, sports, and empathy-building community service.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. About School -->
+        <section id="about" class="section-padding bg-light">
+            <div class="container">
+                <div class="split-layout">
+                    <div class="split-content reveal fade-right">
+                        <span class="eyebrow">Our Legacy</span>
+                        <h2 class="section-title">A Vision Born in the Pristine Environment of Kandivali</h2>
+                        <div class="title-divider left"></div>
+                        <p>Founded on June 22, 1992, by Mrs. & Mr. Lokhandwala, LFS was established to provide true education that enables individuals to rise above the mundane and become spiritually elevated.</p>
+                        
+                        <blockquote class="vision-quote">
+                            "To equip generations of children with the highest principles, enabling them to empathize with the underprivileged and provide selfless service to the country."
+                        </blockquote>
+                        
+                        <div class="principal-msg">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Ms. Arti Desai - Principal" class="avatar" loading="lazy">
+                            <div>
+                                <h4>Ms. Arti Desai</h4>
+                                <span>Principal, LFS</span>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-outline btn-ripple mt-2">Read Full Message</a>
+                    </div>
+                    <div class="split-image reveal fade-left">
+                        <div class="img-wrapper rounded shadow-lg parallax-img">
+                            <img src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Lokhandwala Foundation School Campus" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Academic Excellence -->
+        <section id="academics" class="section-padding bg-navy text-white">
+            <div class="container">
+                <div class="section-header center reveal fade-up">
+                    <span class="eyebrow text-gold">Curriculum</span>
+                    <h2 class="section-title text-white">Academic Excellence</h2>
+                    <div class="title-divider"></div>
+                    <p class="max-w-700">Affiliated with the Council for the Indian School Certificate Examinations (ICSE), we provide a rigorous, balanced, and globally recognized curriculum.</p>
+                </div>
+                
+                <div class="grid grid-4 mt-4">
+                    <div class="edu-card reveal fade-up delay-1">
+                        <h4>Pre-Primary</h4>
+                        <p>Foundational learning through play, exploration, and structured sensory activities.</p>
+                    </div>
+                    <div class="edu-card reveal fade-up delay-2">
+                        <h4>Primary</h4>
+                        <p>Fostering curiosity and establishing strong fundamentals in languages and sciences.</p>
+                    </div>
+                    <div class="edu-card reveal fade-up delay-3">
+                        <h4>Middle School</h4>
+                        <p>Developing analytical skills and independent thought processes.</p>
+                    </div>
+                    <div class="edu-card reveal fade-up delay-4">
+                        <h4>High School (ICSE)</h4>
+                        <p>Rigorous board preparation ensuring admissions into top global universities.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Achievements (Counters) -->
+        <section class="section-padding counters-section">
+            <div class="container">
+                <div class="grid grid-4">
+                    <div class="counter-box reveal fade-up">
+                        <div class="counter-number text-gold" data-target="30">0</div>
+                        <div class="counter-label">Years of Excellence</div>
+                    </div>
+                    <div class="counter-box reveal fade-up delay-1">
+                        <div class="counter-number text-gold" data-target="100">0</div>
+                        <span class="counter-suffix">%</span>
+                        <div class="counter-label">ICSE Pass Rate</div>
+                    </div>
+                    <div class="counter-box reveal fade-up delay-2">
+                        <div class="counter-number text-gold" data-target="23">0</div>
+                        <span class="counter-suffix">:1</span>
+                        <div class="counter-label">Student-Teacher Ratio</div>
+                    </div>
+                    <div class="counter-box reveal fade-up delay-3">
+                        <div class="counter-number text-gold" data-target="50">0</div>
+                        <span class="counter-suffix">+</span>
+                        <div class="counter-label">Extracurricular Clubs</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5 & 6. Facilities & Student Life -->
+        <section id="facilities" class="section-padding bg-light">
+            <div class="container">
+                <div class="section-header center reveal fade-up">
+                    <h2 class="section-title">A Campus Built for Growth</h2>
+                    <div class="title-divider"></div>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item reveal fade-up delay-1">
+                        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Science Laboratory" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4>Modern Laboratories</h4>
+                        </div>
+                    </div>
+                    <div class="gallery-item wide reveal fade-up delay-2">
+                        <img src="https://images.unsplash.com/photo-1526676037777-05a232554f77?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Sports Grounds" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4>Expansive Sports Complex</h4>
+                        </div>
+                    </div>
+                    <div class="gallery-item tall reveal fade-up delay-3">
+                        <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Library" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4>Resourceful Library</h4>
+                        </div>
+                    </div>
+                    <div class="gallery-item reveal fade-up delay-4">
+                        <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Performing Arts" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4>Performing Arts Studio</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 11. Admissions CTA -->
+        <section id="admissions" class="section-padding admissions-cta">
+            <div class="cta-overlay"></div>
+            <div class="container relative z-10 center text-white reveal fade-up">
+                <h2 class="section-title text-white">Begin Your Journey With Us</h2>
+                <p class="max-w-700 mx-auto mt-2 mb-4">Admissions for the 2026-2027 academic year are now open. Discover our admission process, fee structures, and campus tour schedules.</p>
+                <a href="#" class="btn btn-gold btn-ripple">Start Application</a>
+                <a href="#" class="btn btn-outline text-white btn-ripple ml-2">Download Prospectus</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer & 12. Contact Preview -->
+    <footer id="contact" class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                
+                <div class="footer-brand">
+                    <div class="logo-text text-white mb-2">
+                        <span>Lokhandwala</span>
+                        <span>Foundation School</span>
+                    </div>
+                    <p class="text-grey">Equipping generations with education of the highest principles.</p>
+                    <div class="social-links mt-2">
+                        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M22,12C22,6.48 17.52,2 12,2C6.48,2 2,6.48 2,12C2,16.84 5.44,20.87 10,21.8V15H8V12H10V9.5C10,7.53 11.16,6.42 12.94,6.42C13.82,6.42 14.75,6.58 14.75,6.58V8.57H13.73C12.73,8.57 12.42,9.19 12.42,9.84V12H14.66L14.3,15H12.42V21.8C16.96,20.87 20.4,16.84 20.4,12H22Z"/></svg></a>
+                        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H19M18.5,18.5V13.2A3.26,3.26 0 0,0 15.24,9.94C14.39,9.94 13.4,10.46 12.92,11.24V10.13H10.13V18.5H12.92V13.57C12.92,12.8 13.54,12.17 14.31,12.17A1.4,1.4 0 0,1 15.71,13.57V18.5H18.5M6.88,8.56A1.68,1.68 0 0,0 8.56,6.88C8.56,5.95 7.81,5.19 6.88,5.19A1.69,1.69 0 0,0 5.19,6.88C5.19,7.81 5.95,8.56 6.88,8.56M8.27,18.5V10.13H5.5V18.5H8.27Z"/></svg></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4 class="text-gold">Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About LFS</a></li>
+                        <li><a href="#academics">Curriculum</a></li>
+                        <li><a href="#admissions">Admissions</a></li>
+                        <li><a href="#">Mandatory Disclosures</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4 class="text-gold">Contact Us</h4>
+                    <address>
+                        <p><strong>Address:</strong> Whispering Palms Plaza, Lokhandwala Township, Akurli Road, Kandivali (East), Mumbai - 400101, Maharashtra, India.</p>
+                        <p><strong>Phone:</strong> <a href="tel:+9102229663662">022-29663662</a> / <a href="tel:+9102229666723">022-29666723</a></p>
+                        <p><strong>Email:</strong> <a href="mailto:info@lokhandwalaschool.org">info@lokhandwalaschool.org</a></p>
+                    </address>
+                </div>
+
+                <div class="footer-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d3768.1064292109867!2d72.8622119!3d19.2131976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b738c8c5c747%3A0xc3f6a27e0ea9bf38!2sLokhandwala%20Foundation%20School!5e0!3m2!1sen!2sin!4v1690000000000!5m2!1sen!2sin" width="100%" height="200" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="School Location Map"></iframe>
+                </div>
+
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lokhandwala Foundation School. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#top" id="back-to-top" aria-label="Back to top">↑</a>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // 1. Preloader Removal
+            const preloader = document.getElementById('preloader');
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    preloader.style.opacity = '0';
+                    setTimeout(() => {
+                        preloader.style.display = 'none';
+                    }, 500);
+                }, 300);
+            });
+
+            // 2. Sticky Header & Color Change on Scroll
+            const header = document.getElementById('header');
+            const backToTop = document.getElementById('back-to-top');
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+                
+                if (window.scrollY > 500) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
+            });
+
+            // 3. Mobile Navigation Toggle
+            const mobileToggle = document.querySelector('.mobile-toggle');
+            const mainNav = document.querySelector('.main-nav');
+            const navLinks = document.querySelectorAll('.nav-links li a');
+
+            mobileToggle.addEventListener('click', () => {
+                mainNav.classList.toggle('nav-active');
+                mobileToggle.classList.toggle('toggle-active');
+                
+                const isExpanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+                mobileToggle.setAttribute('aria-expanded', !isExpanded);
+            });
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (mainNav.classList.contains('nav-active')) {
+                        mainNav.classList.remove('nav-active');
+                        mobileToggle.classList.remove('toggle-active');
+                        mobileToggle.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            });
+
+            // 4. Scroll Reveal Animations
+            const revealElements = document.querySelectorAll('.reveal');
+            
+            const revealOptions = {
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, revealOptions);
+
+            revealElements.forEach(el => {
+                revealObserver.observe(el);
+            });
+
+            // 5. Animated Counters
+            const counters = document.querySelectorAll('.counter-number');
+            let hasCounted = false;
+
+            const counterObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !hasCounted) {
+                        hasCounted = true;
+                        counters.forEach(counter => {
+                            const updateCount = () => {
+                                const target = +counter.getAttribute('data-target');
+                                const count = +counter.innerText;
+                                const inc = target / 50; 
+                                
+                                if (count < target) {
+                                    counter.innerText = Math.ceil(count + inc);
+                                    setTimeout(updateCount, 30);
+                                } else {
+                                    counter.innerText = target;
+                                }
+                            };
+                            updateCount();
+                        });
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            const counterSection = document.querySelector('.counters-section');
+            if (counterSection) {
+                counterObserver.observe(counterSection);
+            }
+
+            // 6. Button Ripple Effect
+            const buttons = document.querySelectorAll('.btn-ripple');
+            
+            buttons.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    let x = e.clientX - e.target.getBoundingClientRect().left;
+                    let y = e.clientY - e.target.getBoundingClientRect().top;
+                    
+                    let ripples = document.createElement('span');
+                    ripples.style.left = x + 'px';
+                    ripples.style.top = y + 'px';
+                    ripples.classList.add('ripple');
+                    this.appendChild(ripples);
+                    
+                    setTimeout(() => {
+                        ripples.remove();
+                    }, 600);
+                });
+            });
+
+            // 7. Parallax Effect for About Image
+            const parallaxImg = document.querySelector('.parallax-img img');
+            if (parallaxImg) {
+                window.addEventListener('scroll', () => {
+                    let scrollPos = window.scrollY;
+                    if (scrollPos < 1500) {
+                        parallaxImg.style.transform = `translateY(${scrollPos * 0.05}px)`;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
